@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/jogendra/ic/p1"
+	"import-cycle-example/p1"
 )
 
 func main() {
-	p1.CallingHelloFromP2()
+	p1.HelloFromP2Side()
 }
