@@ -5,5 +5,6 @@ import (
 )
 
 func main() {
-	p1.HelloFromP2Side()
+	pp1 := p1.PP1{}
+	pp1.HelloFromP2Side()
 }
