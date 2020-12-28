@@ -5,12 +5,7 @@ import (
 	"import-cycle-example/p2"
 )
 
-type PP1 struct {
-}
-
-func New() *PP1 {
-	return &PP1{}
-}
+type PP1 struct{}
 
 func (p *PP1) HelloFromP1() {
 	fmt.Println("Hello from package p1")
