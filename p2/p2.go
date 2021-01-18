@@ -22,6 +22,10 @@ func (p *PP2) HelloFromP2() {
 	fmt.Println("Hello from package p2")
 }
 
+func helloFromP2A() {
+	fmt.Println("Hello from package p2")
+}
+
 func (p *PP2) HelloFromP1Side() {
 	p.PP1.HelloFromP1()
 }

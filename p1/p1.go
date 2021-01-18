@@ -2,7 +2,7 @@ package p1
 
 import (
 	"fmt"
-	"import-cycle-example/p2"
+	_ "unsafe"
 )
 
 type PP1 struct{}
@@ -11,7 +11,10 @@ func (p *PP1) HelloFromP1() {
 	fmt.Println("Hello from package p1")
 }
 
+//go:noescape
+//go:linkname helloFromP2A p2.helloFromP2A
+func helloFromP2A()
+
 func (p *PP1) HelloFromP2Side() {
-	pp2 := p2.New(p)
-	pp2.HelloFromP2()
+	helloFromP2A()
 }
